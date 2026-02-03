@@ -9,28 +9,39 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 bg-secondary">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}
-          className="text-4xl font-heading mb-10 text-center text-primary">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-4xl font-heading mb-10 text-center text-primary"
+        >
           Our Projects
         </motion.h2>
 
-        <div className="flex justify-center gap-6 mb-12">
+        <div className="flex justify-center gap-6 mb-12 flex-wrap">
           {categories.map(cat => (
-            <button key={cat}
-              className={`${selectedCategory === cat ? 'bg-accent text-white' : 'bg-white text-primary'} px-4 py-2 border rounded transition`}
-              onClick={() => setSelectedCategory(cat)}>
+            <button
+              key={cat}
+              className={`${selectedCategory === cat ? 'bg-accent text-white' : 'bg-white text-primary border border-primary'} px-4 py-2 rounded transition hover:bg-accent hover:text-white`}
+              onClick={() => setSelectedCategory(cat)}
+            >
               {cat}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-6">
           {filteredProjects.map(project => (
-            <motion.div key={project.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="relative cursor-pointer rounded-xl overflow-hidden shadow-xl hover:scale-105 transition">
-              <img src={project.image} alt={project.title} className="w-full" />
-              <div className="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded">{project.title}</div>
+            <motion.div
+              key={project.id}
+              whileHover={{ scale: 1.05 }}
+              className="relative group overflow-hidden rounded"
+            >
+              <img src={project.image} alt={project.title} className="h-60 w-full object-cover" />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                <p className="text-white font-medium">{project.title}</p>
+              </div>
             </motion.div>
           ))}
         </div>
