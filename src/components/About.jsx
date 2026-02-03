@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
+import aboutImage from '../assets/about.jpg';
 
 export default function About() {
   return (
     <section id="about" className="py-20 bg-secondary">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
         className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
-        <img src="/about-furniture.jpg" alt="Craftsmanship" className="md:w-1/2 rounded-xl shadow-xl" />
+        <img src={aboutImage} alt="Craftsmanship" className="md:w-1/2 rounded-xl shadow-xl" />
         <div className="md:w-1/2">
           <h2 className="text-4xl font-heading mb-6 text-primary">About Kawichchi</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
