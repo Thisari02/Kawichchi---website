@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-body text-primary bg-secondary pt-16">
+    <div className="font-body text-primary bg-secondary">
       <Navbar />
       <Hero />
       <About />
