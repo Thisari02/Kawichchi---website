@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="text-center py-6 text-white bg-primary">
-      © {new Date().getFullYear()} Kawichchi by Siriwardana (Pvt) Ltd
+    <footer className="bg-primary text-white text-center py-6 px-4">
+      © 2026 Kawichchi. All Rights Reserved.
     </footer>
   );
 }

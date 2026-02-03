@@ -8,6 +8,7 @@ export default {
         secondary: '#F5F1EA',     // warm beige
         accent: '#BFA57A',        // muted gold
         button: '#111111',
+        whatsapp: '#25D366',      // WhatsApp green
       },
       fontFamily: {
         heading: ['Playfair Display', 'serif'],
