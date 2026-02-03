@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
+import heroImage from '../assets/hero.jpg';
 
 export default function Hero() {
   return (
     <section
       id="home"
       className="h-screen bg-cover bg-center relative flex items-center justify-center text-center"
-      style={{ backgroundImage: "url('/hero-bg.jpg')" }}
+      style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 max-w-3xl px-6">
