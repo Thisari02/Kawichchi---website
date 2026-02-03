@@ -10,7 +10,3 @@ export default function Home() {
     </section>
   );
 }
-      </div>
-    </section>
-  );
-}
