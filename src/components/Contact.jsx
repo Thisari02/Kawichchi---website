@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { HiLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
   return (
@@ -20,12 +22,37 @@ export default function Contact() {
           </motion.button>
         </motion.form>
 
+        {/* WhatsApp Button */}
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="mt-6 text-center">
           <a href="https://wa.me/94771234567" target="_blank" rel="noopener noreferrer"
             className="px-6 py-3 bg-whatsapp text-white rounded hover:bg-green-700 transition">
             Chat on WhatsApp
           </a>
         </motion.div>
+
+        {/* Factory Location & Social Media */}
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6 text-primary">
+          
+          {/* Factory Location */}
+          <div className="flex items-center gap-2">
+            <HiLocationMarker className="text-accent text-2xl" />
+            <span>123 Kawichchi St, Colombo, Sri Lanka</span>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex gap-4">
+            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">
+              <FaFacebookF size={24} />
+            </a>
+            <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">
+              <FaInstagram size={24} />
+            </a>
+            <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition">
+              <FaLinkedinIn size={24} />
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
   );
